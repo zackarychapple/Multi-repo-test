@@ -4,7 +4,10 @@ pipeline {
     }
     agent none
     environment {
-          def result = sh script: 'git branch --show-current', returnStdout: true
+          def result = sh (
+            script: 'git branch --show-current',
+            returnStdout: true
+          )
           NX_BRANCH = result.replace('PR-', '')
     }
     stages {
