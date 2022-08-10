@@ -3,6 +3,9 @@ pipeline {
       nodejs "npm"
     }
     agent none
+    environment {
+          NX_BRANCH = env.BRANCH_NAME.replace('PR-', '')
+    }
     stages {
         stage('Pipeline') {
             parallel {
