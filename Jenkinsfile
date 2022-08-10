@@ -1,6 +1,6 @@
 pipeline {
     tools {
-      nodejs "NODEJS"
+      nodejs "npm"
     }
     agent none
     environment {
@@ -14,15 +14,13 @@ pipeline {
                         branch 'main'
                     }
                     agent any
-                    nodejs('npm'){
-                      steps {
-                          sh "npm ci"
-                          sh "npx nx workspace-lint"
-                          sh "npx nx format:check"
-                          sh "npx nx affected --base=HEAD~1 --target=lint --parallel=3"
-                          sh "npx nx affected --base=HEAD~1 --target=test --parallel=3"
-                          sh "npx nx affected --base=HEAD~1 --target=build --parallel=3"
-                      }
+                    steps {
+                        sh "npm ci"
+                        sh "npx nx workspace-lint"
+                        sh "npx nx format:check"
+                        sh "npx nx affected --base=HEAD~1 --target=lint --parallel=3"
+                        sh "npx nx affected --base=HEAD~1 --target=test --parallel=3"
+                        sh "npx nx affected --base=HEAD~1 --target=build --parallel=3"
                     }
                 }
                 stage('PR') {
