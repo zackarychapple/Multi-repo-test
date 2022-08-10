@@ -3,10 +3,6 @@ pipeline {
       nodejs "npm"
     }
     agent none
-//
-    environment {
-          'branch' GIT_BRANCH
-    }
     stages {
         stage('Pipeline') {
             parallel {
@@ -31,6 +27,7 @@ pipeline {
                     }
                     agent any
                     steps {
+                        echo GIT_BRANCH
                         sh "npm ci"
                         sh "npx nx workspace-lint"
                         sh "npx nx format:check"
