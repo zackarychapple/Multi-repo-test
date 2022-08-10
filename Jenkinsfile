@@ -4,7 +4,7 @@ pipeline {
     }
     agent none
     environment {
-          NX_BRANCH = env.BRANCH_NAME.replace('PR-', '')
+          NX_BRANCH = sh('git branch --show-current').replace('PR-', '')
     }
     stages {
         stage('Pipeline') {
