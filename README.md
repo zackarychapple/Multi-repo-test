@@ -103,3 +103,11 @@ Nx Cloud pairs with Nx in order to enable you to build and test code more rapidl
 Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
+
+
+## Jenkins
+`docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk11`
+
+d7cc271ed476de7e57a7be78a3c159e43bc07c042cd1cd382640452d01d6376c
+docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home 0513243d169fcafaf6ff2d2c3efe501e969f99b3c624b0b83af6441c246045e6
+docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home cb19de86a7096501bd3d4db01cc9caf25f14bff924e95c6dfe13ec1de92b2cdf
