@@ -3,9 +3,6 @@ pipeline {
       nodejs "npm"
     }
     agent none
-    environment {
-        NX_BRANCH = 'main'
-    }
     stages {
         stage('Pipeline') {
             parallel {
