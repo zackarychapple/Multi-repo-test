@@ -4,9 +4,9 @@ pipeline {
     }
     agent none
 //
-//     environment {
-//           NX_BRANCH = GIT_BRANCH.replace('PR-', '')
-//     }
+    environment {
+          branch = GIT_BRANCH
+    }
     stages {
         stage('Pipeline') {
             parallel {
