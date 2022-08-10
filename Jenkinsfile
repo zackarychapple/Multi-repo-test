@@ -3,8 +3,8 @@ pipeline {
       nodejs "npm"
     }
     agent none
+    echo GIT_BRANCH
     environment {
-          echo GIT_BRANCH
           NX_BRANCH = GIT_BRANCH.replace('PR-', '')
     }
     stages {
