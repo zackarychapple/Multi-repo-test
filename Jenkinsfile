@@ -5,7 +5,7 @@ pipeline {
     agent none
 //
     environment {
-          'branch' = GIT_BRANCH
+          'branch' GIT_BRANCH
     }
     stages {
         stage('Pipeline') {
