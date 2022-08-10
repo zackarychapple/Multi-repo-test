@@ -4,7 +4,7 @@ pipeline {
     }
     agent none
     environment {
-          def result = sh (
+          result = sh (
             script: 'git branch --show-current',
             returnStdout: true
           )
