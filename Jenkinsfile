@@ -8,7 +8,7 @@ pipeline {
             script: 'git branch --show-current',
             returnStdout: true
           )
-          echo ${result}
+          echo result
           NX_BRANCH = ${result}.replace('PR-', '')
     }
     stages {
