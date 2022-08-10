@@ -4,12 +4,8 @@ pipeline {
     }
     agent none
     environment {
-          result = sh (
-            script: 'git branch --show-current',
-            returnStdout: true
-          )
-          echo "test ${result}"
-          NX_BRANCH = ${result}.replace('PR-', '')
+          echo GIT_BRANCH
+          NX_BRANCH = GIT_BRANCH.replace('PR-', '')
     }
     stages {
         stage('Pipeline') {
