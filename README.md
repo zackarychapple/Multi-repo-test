@@ -108,6 +108,18 @@ Visit [Nx Cloud](https://nx.app/) to learn more.
 ## Jenkins
 `docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk11`
 
-d7cc271ed476de7e57a7be78a3c159e43bc07c042cd1cd382640452d01d6376c
+docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home d7cc271ed476de7e57a7be78a3c159e43bc07c042cd1cd382640452d01d6376c
 docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home 0513243d169fcafaf6ff2d2c3efe501e969f99b3c624b0b83af6441c246045e6
 docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home cb19de86a7096501bd3d4db01cc9caf25f14bff924e95c6dfe13ec1de92b2cdf
+docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home a0b35c5d5119fbecbb0dc25e740a75e3c7ade53d89b79fda7127042b89494fa9
+docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home 4a7a19f30c3f50fcd6552c27ad5a14b60b5b917f6d7c57047a1dea53baace530
+docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home 081c4f73b152c29c761ecda5d3b38396290f6ab26444a4cdc7cd246d5021b2ac
+
+
+## had to run this manually
+$ git ls-remote -h -- git@github.com:zackarychapple/Multi-repo-test.git HEAD
+The authenticity of host 'github.com (140.82.113.3)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,140.82.113.3' (ECDSA) to the list of known hosts.
+$
